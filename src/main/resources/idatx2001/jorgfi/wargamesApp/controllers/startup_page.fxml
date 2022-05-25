@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<Pane maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: black; -fx-border-width: 5px;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="idatx2001.jorgfi.wargamesApp.controllers.StartupController">
+   <children>
+      <FontIcon iconLiteral="eli-star" iconSize="50" layoutX="275.0" layoutY="111.0" />
+      <Text layoutX="217.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WarGames">
+         <font>
+            <Font name="AppleGothic Regular" size="33.0" />
+         </font>
+      </Text>
+      <Text layoutX="246.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By Jørgen Finsveen" />
+      <MFXButton fx:id="startButton" ellipsisString="" layoutX="249.0" layoutY="237.0" onAction="#startApplication" style="-fx-background-color: #1CD760;" text="Start" />
+      <MFXButton fx:id="helpButton" layoutX="303.0" layoutY="237.0" onAction="#showHelp" style="-fx-background-color: #1AADF0;" text="Help" />
+      <MFXButton fx:id="exitButton" layoutX="275.0" layoutY="271.0" onAction="#exitApplication" prefWidth="45.139" style="-fx-background-color: FF3D2B;" text="Exit" />
+   </children>
+</Pane>

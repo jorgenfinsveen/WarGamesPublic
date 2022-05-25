@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="idatx2001.jorgfi.wargamesApp.controllers.UnitConfiguratorController1">
+   <top>
+      <AnchorPane prefHeight="50.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="111.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New unit">
+               <font>
+                  <Font size="21.0" />
+               </font></Text>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <GridPane prefHeight="289.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="104.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="214.0" minWidth="10.0" prefWidth="214.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.0" minWidth="10.0" prefWidth="48.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type:">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="16.0" />
+               </font></Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="16.0" />
+               </font></Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Health:" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="16.0" />
+               </font></Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Armor:" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="16.0" />
+               </font></Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Attack:" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="16.0" />
+               </font></Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Amount:" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="16.0" />
+               </font></Text>
+            <TextField fx:id="inputUnitName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="choiceBox" prefHeight="26.0" prefWidth="196.0" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin></ChoiceBox>
+            <TextField fx:id="inputUnitHealth" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="inputUnitArmor" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="inputUnitAttack" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="inputUnitAmount" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="73.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="3.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="4.0" />
+               </font>
+            </Text>
+            <Text layoutX="45.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By leaving health, armor or attack emtpy," />
+            <Text layoutX="57.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="the game will assign default values." />
+            <MFXButton layoutX="165.0" layoutY="41.0" onAction="#confirmUnit" style="-fx-background-color: #1CD760 #1CD760 #1CD760 #1CD760;" text="Continue" />
+            <MFXButton layoutX="70.0" layoutY="41.0" onAction="#returnToArmyConfigurator" prefWidth="73.5" style="-fx-background-color: FF3D2B FF3D2B FF3D2B FF3D2B FF3D2B FF3D2B FF3D2B FF3D2B;" text="Close" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
